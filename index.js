@@ -1,7 +1,9 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const Note = require('./models/note');
 let app = express();
+app.use(cors());
 app.use(express.json());
 
 app.get('/api/notes', (request, response) => {
