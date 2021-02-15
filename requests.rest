@@ -1,1 +1,34 @@
+POST http://localhost:3001/api/users
+content-type: application/json
+
+{
+    "username": "snokaru",
+    "name": "Vlad Slivilescu",
+    "password": "testpw"
+}
+
+###
 GET http://localhost:3001/api/notes
+
+###
+GET http://localhost:3001/api/users
+
+###
+POST http://localhost:3001/api/notes
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNub2thcnUiLCJpZCI6IjYwMmE4ZWI0ZWY4ZmU1MDhjMTBiYTc3NyIsImlhdCI6MTYxMzQxNDc5Nn0.3Ix2MTR91eRjSh4zHuVck6OFOz5kmGh6esqmx6C2Ts0
+Content-Type: application/json
+
+{
+    "content": "still testing...",
+    "important": true,
+    "userId": "602a8eb4ef8fe508c10ba777"
+}
+
+###
+POST http://localhost:3001/api/login
+content-type: application/json
+
+{
+    "username": "snokaru",
+    "password": "testpw"
+}
